@@ -18,6 +18,8 @@ export interface IFormProps {
   appendTo?: "self" | HTMLElement | undefined | null;
   fieldType?: string;
   disable?: boolean;
+  itemTemplate?: (option: any) => JSX.Element;
+  valueTemplate?: (option: any, props: any) => JSX.Element;
 }
 export interface IAttribute_Object {
   maxDate?: string;
@@ -32,7 +34,7 @@ export interface IAttribute_Object {
 }
 export interface IOptions {
   label: string | any;
-  value: string | number;
+  value?: string | number;
   code?: string | number;
   items?: IOptions[];
   extra_label?: string;
@@ -55,6 +57,7 @@ export interface IRules {
   showTime?: boolean;
   multiple?: boolean;
   placeholder?: string;
+  allowEmpty?: boolean;
 }
 export interface IAttributeObject {
   [key: string]: IAttribute_Object;
