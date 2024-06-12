@@ -1,5 +1,6 @@
 import Fuse from "fuse.js";
 import { IOptions } from "./forms.model";
+import { DEFAULT_LABEL_VALUE } from "../../../../library/utilities/constant";
 enum SEARCH_MODE {
   EXACT = "Exact",
   WILD = "Wild",
@@ -62,16 +63,35 @@ export const fuseFilter = (
         .map((x: any) => x.item);
       fuseResult = resultLabel;
     }
+    const labels = [
+      DEFAULT_LABEL_VALUE.HANDLE_LABEL,
+      DEFAULT_LABEL_VALUE.NO_MORE_RECORD_LABEL,
+    ];
+    fuseResult = fuseResult.filter((list: any) => !labels.includes(list.label));
 
-    fuseResult = fuseResult.filter((list: any) => list.label !== "Handle");
-    const defaultOption = dropDownOption.find(
-      (list: any) => list.label === "Handle"
+    // Find default options
+    const defaultOptionHandle = dropDownOption.find(
+      (list) => list.label === DEFAULT_LABEL_VALUE.HANDLE_LABEL
     );
+    const defaultOptionWithNoMoreRecord = dropDownOption.find(
+      (list) => list.label === DEFAULT_LABEL_VALUE.NO_MORE_RECORD_LABEL
+    );
+
     if (
-      defaultOption &&
-      !fuseResult.find((list: any) => list.label === "Handle")
+      defaultOptionHandle &&
+      !fuseResult.find(
+        (list: any) => list.label === DEFAULT_LABEL_VALUE.HANDLE_LABEL
+      )
     ) {
-      fuseResult.unshift(defaultOption);
+      fuseResult.unshift(defaultOptionHandle);
+    }
+    if (
+      defaultOptionWithNoMoreRecord &&
+      !fuseResult.find(
+        (list: any) => list.label === DEFAULT_LABEL_VALUE.NO_MORE_RECORD_LABEL
+      )
+    ) {
+      fuseResult.push(defaultOptionWithNoMoreRecord);
     }
   }
 
