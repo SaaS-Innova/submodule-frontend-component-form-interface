@@ -33,7 +33,7 @@ export interface IAttribute_Object {
   treeOptions?: TreeNode[];
 }
 export interface IOptions {
-  label?: string | any;
+  label: string | any;
   value?: string | number;
   code?: string | number;
   items?: IOptions[];
