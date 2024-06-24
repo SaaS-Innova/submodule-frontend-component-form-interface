@@ -33,12 +33,13 @@ export interface IAttribute_Object {
   treeOptions?: TreeNode[];
 }
 export interface IOptions {
-  label: string | any;
+  label?: string | any;
   value?: string | number;
   code?: string | number;
   items?: IOptions[];
   extra_label?: string;
   tableAttributes?: { [key: string]: any };
+  icon?: string;
 }
 export interface IRules {
   type?: string;
