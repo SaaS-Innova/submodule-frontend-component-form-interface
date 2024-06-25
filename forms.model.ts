@@ -59,6 +59,7 @@ export interface IRules {
   multiple?: boolean;
   placeholder?: string;
   allowEmpty?: boolean;
+  showIcon?: boolean;
 }
 export interface IAttributeObject {
   [key: string]: IAttribute_Object;
