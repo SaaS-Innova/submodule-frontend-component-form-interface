@@ -20,6 +20,10 @@ export interface IFormProps {
   disable?: boolean;
   itemTemplate?: (option: any) => JSX.Element;
   valueTemplate?: (option: any, props: any) => JSX.Element;
+  suffixIcon?: {
+    icon: string;
+    handleClick: () => void;
+  };
 }
 export interface IAttribute_Object {
   maxDate?: string;
