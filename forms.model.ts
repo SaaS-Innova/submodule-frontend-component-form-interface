@@ -64,6 +64,7 @@ export interface IRules {
   placeholder?: string;
   allowEmpty?: boolean;
   showIcon?: boolean;
+  itemPerRow?: number;
 }
 export interface IAttributeObject {
   [key: string]: IAttribute_Object;
