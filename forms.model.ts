@@ -65,6 +65,10 @@ export interface IRules {
   allowEmpty?: boolean;
   showIcon?: boolean;
   itemPerRow?: number;
+  dateView?: {
+    view: any;
+    format: string;
+  };
 }
 export interface IAttributeObject {
   [key: string]: IAttribute_Object;
