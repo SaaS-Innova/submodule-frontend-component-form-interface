@@ -24,6 +24,7 @@ export interface IFormProps {
     icon: string;
     handleClick: () => void;
   };
+  handleBlurEvent?: (data: any) => void;
 }
 export interface IAttribute_Object {
   maxDate?: string;
