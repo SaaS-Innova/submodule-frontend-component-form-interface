@@ -37,6 +37,7 @@ export interface IAttribute_Object {
   placeholder?: string;
   treeOptions?: TreeNode[];
   extraLabelElementContent?: JSX.Element;
+  filter?: string;
 }
 export interface IOptions {
   label: string | any;
