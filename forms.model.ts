@@ -68,6 +68,7 @@ export interface IRules {
   allowEmpty?: boolean;
   showIcon?: boolean;
   itemPerRow?: number;
+  isExpand?: boolean;
   dateView?: {
     view: any;
     format: string;
