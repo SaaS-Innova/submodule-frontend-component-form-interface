@@ -26,10 +26,10 @@ export interface IFormProps {
   };
   handleBlurEvent?: (data: any) => void;
   loading?: boolean;
-  isDefaultTime?: IIsDefaultTime;
+  defaultTime?: IDefaultTime;
 }
 
-export interface IIsDefaultTime {
+export interface IDefaultTime {
   defaultFromTime: string | undefined;
   defaultToTime: string | undefined;
 }
