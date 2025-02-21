@@ -26,7 +26,14 @@ export interface IFormProps {
   };
   handleBlurEvent?: (data: any) => void;
   loading?: boolean;
+  isDefaultTime?: IIsDefaultTime;
 }
+
+export interface IIsDefaultTime {
+  defaultFromTime: string | undefined;
+  defaultToTime: string | undefined;
+}
+
 export interface IAttribute_Object {
   maxDate?: string;
   minDate?: string;
