@@ -27,6 +27,7 @@ export interface IFormProps {
   handleBlurEvent?: (data: any) => void;
   loading?: boolean;
   defaultTime?: IDefaultTime;
+  customToolBar?: any;
 }
 
 export interface IDefaultTime {
