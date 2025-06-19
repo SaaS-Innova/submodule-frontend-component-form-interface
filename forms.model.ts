@@ -28,7 +28,10 @@ export interface IFormProps {
   loading?: boolean;
   defaultTime?: IDefaultTime;
   customToolBar?: any;
-  showAdjustButtons?: boolean;
+  showAdjustButtons?: {
+    isShowAdjustButtons: boolean;
+    isButtonInside?: boolean;
+  };
 }
 
 export interface IDefaultTime {
