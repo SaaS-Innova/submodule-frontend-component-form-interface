@@ -32,6 +32,8 @@ export interface IFormProps {
     isShowAdjustButtons: boolean;
     isButtonInside?: boolean;
   };
+  isSetCustomIcon?: boolean;
+  customIcon?: JSX.Element | string;
 }
 
 export interface IDefaultTime {
