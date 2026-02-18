@@ -60,6 +60,8 @@ export interface IOptions {
   extra_label?: string;
   tableAttributes?: { [key: string]: any };
   icon?: string;
+  tooltip?: string | JSX.Element;
+  tooltipTarget?: string;
 }
 export interface IRules {
   type?: string;
