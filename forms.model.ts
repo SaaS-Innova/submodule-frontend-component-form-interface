@@ -88,6 +88,7 @@ export interface IRules {
     view: any;
     format: string;
   };
+  showWeek?: boolean;
 }
 export interface IAttributeObject {
   [key: string]: IAttribute_Object;
