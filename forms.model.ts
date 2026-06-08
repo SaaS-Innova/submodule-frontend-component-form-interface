@@ -1,4 +1,5 @@
 import { TreeNode } from "primereact/treenode";
+import { ReactNode } from "react";
 
 export interface IFormProps {
   attribute: string;
@@ -22,6 +23,7 @@ export interface IFormProps {
   valueTemplate?: (option: any, props: any) => JSX.Element;
   suffixIcon?: {
     icon: string;
+    node?: ReactNode;
     handleClick: () => void;
   };
   handleBlurEvent?: (data: any) => void;
